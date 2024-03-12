@@ -22,10 +22,17 @@ export default function ProfilePage() {
         console.error("There was an error fetching the user data:", error)
       );
   }, []);
-  const handleSignOut = () => {
-    const jwt_cookie = deleteCookie("jwt");
-    console.log(jwt_cookie);
-    window.location.href = "http://127.0.0.1:8000/logout";
+
+  const handleSignOut = async () => {
+    try {
+      // Call the backend logout endpoint
+      await axios.get("http://localhost:8000/logout/", {
+        withCredentials: true,
+      });
+      window.location.href = "/";
+    } catch (error) {
+      console.error("Error during sign out:", error);
+    }
   };
 
   return (
