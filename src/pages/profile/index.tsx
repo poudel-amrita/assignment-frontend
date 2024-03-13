@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { deleteCookie } from "cookies-next";
 import Button from "@/components/Button/button";
 
 interface User {
