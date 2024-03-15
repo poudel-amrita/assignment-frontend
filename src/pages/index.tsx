@@ -1,10 +1,10 @@
-import Button from "@/components/Button/button";
+import Button from "@/components/button";
 
 const handleClick = () => {
   window.location.href = "http://127.0.0.1:8000/login/google";
 };
 
-const googleIcon = (
+export const googleIcon = (
   <svg
     className="mr-2 -ml-1 w-4 h-4"
     aria-hidden="true"
@@ -31,7 +31,7 @@ export default function Home() {
           </h1>
           <Button
             onClick={handleClick}
-            children={googleIcon}
+            icon={googleIcon}
             buttonText="Sign in with Google"
           />
         </div>

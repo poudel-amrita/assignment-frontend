@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Button from "@/components/Button/button";
+import Button from "@/components/button";
 
 interface User {
   name: string;
